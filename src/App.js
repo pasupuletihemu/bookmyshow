@@ -70,9 +70,9 @@ function App() {
   return (
     <div className="App">
       <h1>Naa Cimema.com</h1>
-      {BookMyShow.map((cinema) => {
+      {BookMyShow.map((cinema, i) => {
         return (
-          <div className="show" style={{ display: "inline-block" }}>
+          <div className="show" key={i} style={{ display: "inline-block" }}>
             <img src={cinema.Imagelink} alt="" />
             <h3>{cinema.Moviename}</h3>
             <p>{cinema.Bio}</p>
@@ -81,9 +81,9 @@ function App() {
       })}
 
       <h1>Sunglasses.in</h1>
-      {Sunglasses.map((glasses) => {
+      {Sunglasses.map((glasses, i) => {
         return (
-          <div className="minion" style={{ display: "inline-block" }}>
+          <div className="minion" key={i} style={{ display: "inline-block" }}>
             <img src={glasses.Imagelink} alt="" width={300} />
             <h3>{glasses.Name}</h3>
             <p>{glasses.Price}</p>
